@@ -93,7 +93,7 @@
 
 		<ul class="right">
 		<li class="active"><a href="#">Sign Up</a></li>
-		<li><a href="#">Log In</a></li>
+		<li><a href="#" data-reveal-id="myModal" >Log In</a></li>
 		</ul>
 
 
@@ -107,7 +107,7 @@
 			<div id="top-img">
 				<div class="row">
 					<div id="basic-info" class="large-6 columns small-centered">
-						<h1> <br><br> Sign Up for an Account</h1>
+						<h1> <br><br> Sign Up for an Account with Tutorify</h1>
 					</div>
 				</div>
 			</div>
@@ -172,13 +172,49 @@
 					<div class="row">
 					<a href="#" class="button">Submit</a>
 					</div>
-
-
-
 				</form>
 			</div>
-
 		</div>
+
+
+<div id="myModal" class="reveal-modal remove-whitespace" data-reveal>
+<div class="row">
+    <div class="large-6 columns auth-plain">
+      <div class="signup-panel left-solid">
+        <p class="welcome">Registered Users</p>
+        <form>
+          <div class="row collapse">
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fa fa-user"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="email">
+            </div>
+          </div>
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fa fa-lock"></i></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="password">
+            </div>
+          </div>
+        </form>
+        <a href="#" class="button ">Log In </a>
+      </div>
+    </div>
+
+    <div class="large-6 columns auth-plain">
+    	<div class="signup-panel newusers">
+    		<p class="welcome"> New User?</p>
+    		<p>Create an account to fully take advantage of our platform.  Search, message and set us sessions with tutors or students.</p><br>
+    		<a href="#" class="button ">Sign Up</a></br>
+    	</div>
+    </div>
+
+   </div>   
+  <a class="close-reveal-modal">&#215;</a>
+</div>
 
 <footer class="footer">
   <div class="row">
