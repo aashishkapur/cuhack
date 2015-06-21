@@ -3,17 +3,51 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>signup page</title>
+		<title>Tutorify</title>
 		<link rel="stylesheet" href="css/foundation.css" />
 		<script src="js/vendor/modernizr.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/foundation.min.css" />
+	<script src="js/vendor/modernizr.js"></script>
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="css/flaticon.css" rel="stylesheet" />
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
-		<style type="text/css">
-		*{
-			background-color: #f5f5f5;
-		}
+	<style>
+	.result{
+		width: 95%;
+		height: 200px;
+		background-color: #f5f5f5;
+		margin: 0 auto;
 
+	}
 
-		.box{
+	.result-image{
+		margin-left: 25px;
+		margin-top: 25px;
+		width: 150px;
+		height: 150px;
+		float: left;
+	}
+
+	.result-info{
+		/*background-color: blue;*/
+		height: 90%;
+		width: 75%;
+		/*float: right;*/
+		margin: 0 auto;
+		text-align: center;
+		/*color: yellow;*/
+	}
+
+	.learn-more{
+		height: 50px;
+		width: 50px;
+		float: right;
+		background-color: blue;
+	}
+
+			.box{
 			list-style-type: none;
 
 			width: 100px !important;
@@ -32,7 +66,7 @@
 			list-style-type: none;
 			width: 300px !important;
 
-			background-color: #e0e0e0;
+			background-color: 00000a;
 			text-align: center;
 			/*line-height: 20px;*/
 			/*height:50px !important;*/
@@ -48,7 +82,7 @@
 		}
 
 		.known{
-			background-color: red;
+			background-color: #19B5FE;
 		}
 
 		.element:active{
@@ -62,7 +96,7 @@
 			margin: 0 auto;
 			padding: 0;
 			/*height: 100px;*/
-			background-color: #e0e0e0;
+			background-color: 00000;
 
 		}
 
@@ -71,16 +105,56 @@
 			/*height: 100%;*/
 			/*float: right;*/
 			margin: 0 auto;
-			background-color: #e0e0e0;
+			background-color: 00000;
 			font-weight: bold;
+			color: #F64747;
 
 		}
 
+	</style>
 
-		</style>
+
 	</head>
 	
 	<body>
+
+	
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+	<li class="name">
+	  <h1><a href="index.html">Tutorify</a></h1>
+	</li>
+	 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+	<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+	<!-- Right Nav Section -->
+	<ul class="right">
+	  <li ><a href="index.html">Home</a></li>
+
+
+	  <li class="has-dropdown">
+		<a href="#">Right Button Dropdown</a>
+		<ul class="dropdown">
+		  <li><a href="#">First link in dropdown</a></li>
+		  <li><a href="#">Second link in dropdown</a></li>
+		</ul>
+	  </li>
+
+		<ul class="right">
+			<!-- <li><a href="signup.html">Sign Up</a></li>  -->
+		<li><a href="#" data-reveal-id="myModal" >Log Out</a></li>
+		</ul>
+
+
+	</ul>
+	</section>
+
+</nav>
+
+<h2> Choose subjects you would like to teach: </h2>
+
 
 	<br/><br/>
 	<div class="row">
@@ -211,6 +285,45 @@
 
 			}
 		</script>
+
+
+
+
+		<div style="float: center; text-align:center;margin: 0 auto;">
+		<br/>
+			<a href="#" class="button" >Done</a>
+		</div>
+<br> <br><br>
+
+
+
+   </div>   
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
 	</body>
+
+
+<footer class="footer">
+  <div class="row">
+
+    <div class="small-12 columns">
+      <p class="slogan">Learning and Earning at the Tap of a Button</p>
+      <p class="links">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </p>
+      <p class="copywrite">Copywrite © 2015 Tutorify</p>
+    </div>
+  </div>
+</footer>
+
 
 </html>
