@@ -16,37 +16,39 @@
 		.box{
 			list-style-type: none;
 
-			width: 85%;
-			height: 500px;
+			width: 100px !important;
+			/*height: 500px;*/
 			margin: 0 auto;
 			border: 1px solid black;
-
-
 		}
+
+		ul{
+			margin-bottom: 0px !important;
+			margin-left: 0px !important;
+		}
+
 		.element{
 
 			list-style-type: none;
+			width: 300px !important;
 
 			background-color: #e0e0e0;
 			text-align: center;
-			line-height: 20px;
-			height:20px;
-			width: 100%;
+			/*line-height: 20px;*/
+			/*height:50px !important;*/
+			/*width:100px;*/
 			border: 1px solid black;
 			list-style-position: inside;
-			/*margin: 10px;*/
-			padding: 5%;
-			margin: 0 auto;
+/*			padding: 5px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+*/			margin: 0 auto;
 			text-align: center;
-
+			height: 35px;
 		}
 
-		.element .known{
+		.known{
 			background-color: red;
-		}
-
-		.element:hover, .back:hover{
-			background-color: #9e9e9e;
 		}
 
 		.element:active{
@@ -54,27 +56,23 @@
 		}
 
 		.back{
-			border: 1px solid black;
-			width: 45%;
+			/*border: 1px solid black;*/
+			width: 25%;
 			float: left;
 			margin: 0 auto;
-			height: 20px;
+			padding: 0;
+			/*height: 100px;*/
+			background-color: #e0e0e0;
 
 		}
 
 		.subject{
 			width: 45%;
-			height: 100%;
-			float: right;
+			/*height: 100%;*/
+			/*float: right;*/
 			margin: 0 auto;
-
-		}
-
-		#categories{
-
-		}
-
-		#topics{
+			background-color: #e0e0e0;
+			font-weight: bold;
 
 		}
 
@@ -83,10 +81,12 @@
 	</head>
 	
 	<body>
+
+	<br/><br/>
 	<div class="row">
 		<ul id="box" class="">
 			<li class="element">
-				<div class="back" id="back">&lt;--- Back</div>
+				<div class="back" id="back"> Back</div>
 				<div class="subject">Math</div>
 			</li>
 			<li class="element" id="1">1</li>
@@ -106,15 +106,15 @@
 
 		<script type="text/javascript">
 
-			var categories = ["math", "lit", "science", "history"];
+			var categories = ["Math", "Lit", "Science", "History"];
 			var topics = [
-				["algebra", "pre-calc", "calc"],
-				["lit 1", "lit 2", "lit 3"],
-				["bio", "ap bio", "chem", "ap chem", "phys", "phys h", "ap phys"],
-				["world history", "us history", "apush", "us gov", "ap gov"]
+				["algebra", "pre_calc", "calc"],
+				["lit_1", "lit_2", "lit_3"],
+				["bio", "ap_bio", "chem", "ap_chem", "phys", "phys_h", "ap_phys"],
+				["world_history", "us_history", "apush", "us_gov", "ap_gov"]
 			];
 
-			var topicsKnown = [];
+			var topicsKnown = ["abc"];
 
 			var showingCats = true;
 			$(document).ready(function() {
@@ -137,10 +137,25 @@
  					}
  					else
  					{
- 						// console.log(e.target.id);
- 						topicsKnown.push(e.target.id);
- 						console.log("pushed" + e.target.id);
- 						$("#" + "lit 1").addClass('known');
+ 						// if e.target.id is in the array, delete it from the array, else push it into the array
+						var found = false;
+						var j;
+						for(j = 0; j < topicsKnown.length; j++)
+						{
+							// console.log("184  " + topicsKnown[j] + "  " + topics[idNum][i]);
+							if(topicsKnown[j] === e.target.id)
+							{
+								found = true;
+								break;
+							}
+						}
+
+						if(!found)
+							topicsKnown.push(e.target.id);
+ 						else
+ 							topicsKnown[j] = "";
+
+ 						$("#" + e.target.id).toggleClass('known');
 						// console.log($(this).attr("class").indexOf("known"));						
  					}
  				});
@@ -169,14 +184,25 @@
 			function loadTopic(idNum){
 				showingCats = false;
 				var idNum = categories.indexOf(idNum);
-				var topic = topics[idNum];
 				var htmlText = "<li class=\"element\"><div class=\"back\" id=\"back\">&lt;--- Back</div>" + 
 				" <div class=\"subject\">" + categories[idNum] + "</div></li>";
 
 
 				for(var i = 0; i < topics[idNum].length; i++)
 				{
-					htmlText += "<li class=\"element\" id=\"" + topics[idNum][i] + "\">" + topics[idNum][i] + "</li>";
+					var found = false;
+					for(var j = 0; j < topicsKnown.length; j++)
+					{
+						if(topicsKnown[j] === topics[idNum][i])
+						{
+							found = true;
+							j = topicsKnown.length;
+						}
+					}
+					if(!found)
+						htmlText += "<li class=\"element\" id=\"" + topics[idNum][i] + "\">" + topics[idNum][i] + "</li>";
+					else
+						htmlText += "<li class=\"element known\" id=\"" + topics[idNum][i] + "\">" + topics[idNum][i] + "</li>";
 
 				}
 				$("#box").html(htmlText);
