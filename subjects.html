@@ -41,6 +41,10 @@
 
 		}
 
+		.element .known{
+			background-color: red;
+		}
+
 		.element:hover, .back:hover{
 			background-color: #9e9e9e;
 		}
@@ -110,6 +114,8 @@
 				["world history", "us history", "apush", "us gov", "ap gov"]
 			];
 
+			var topicsKnown = [];
+
 			var showingCats = true;
 			$(document).ready(function() {
 
@@ -131,26 +137,22 @@
  					}
  					else
  					{
- 						// showing topics --> user is selecting topics that they want to teach
- 						
+ 						// console.log(e.target.id);
+ 						topicsKnown.push(e.target.id);
+ 						console.log("pushed" + e.target.id);
+ 						$("#" + "lit 1").addClass('known');
+						// console.log($(this).attr("class").indexOf("known"));						
  					}
  				});
 
- 				// $(".categories").click(function(e){
- 				// 	// alert(e.target.id);
-
- 				// 	// alert($("#" + e.target.id).html());
- 				// 	alert("load topic");
- 				// 	loadTopic(e.target.id);
- 				// });
-
- 				// $(".topics").click(function(e){
- 				// 	alert(e.target.id);
- 				// });
-
-
-
 			});
+
+			function printTK(){
+				for(var i = 0; i < topicsKnown.length; i++)
+				{
+					console.log(topicsKnown[i]);
+				}
+			}
 
 			function loadCategories(){
 				showingCats = true;
