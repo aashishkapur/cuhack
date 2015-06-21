@@ -6,90 +6,185 @@
 		<title>index page</title>
 		<link rel="stylesheet" href="css/foundation.css" />
 		<script src="js/vendor/modernizr.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/foundation.min.css" />
+	<script src="js/vendor/modernizr.js"></script>
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="css/flaticon.css" rel="stylesheet" />
 
-		<style type="text/css">
 
-/*		.top-bar{
-			height: 100px;
-		}
 
-		.top-bar-section li {
-			line-height: 100px;
-		}
-*/
-
-		#content{
-			text-align: center;
-			background-image: url("img/BG1.jpg");
-		}
-		#footer{
-			
-			text-align: center;
-
-			height: 250px;
-			width: 100%;
-			background-color: #212121;
-			color: #fafafa;
-		}
-		</style>
 	</head>
 	
 	<body>
-		<nav class="top-bar" data-topbar role="navigation">
-			<ul class="title-area">
-				<li class="name">
-					<h1><a href="#">My Site</a></h1>
-				</li>
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+	<li class="name">
+	  <h1><a href="#">My Site</a></h1>
+	</li>
+	 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+	<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
-				<li class="toggle-topbar menu-icon">
-					<a href="#">
-						<span>Menu</span>
-					</a>
-				</li>
-			</ul>
+  <section class="top-bar-section">
+	<!-- Right Nav Section -->
+	<ul class="right">
+	  <li class="active"><a href="#">Right Button Active</a></li>
+	  <li class="has-dropdown">
+		<a href="#">Right Button Dropdown</a>
+		<ul class="dropdown">
+		  <li><a href="#">First link in dropdown</a></li>
+		  <li class="active"><a href="#">Active link in dropdown</a></li>
+		</ul>
+	  </li>
+	</ul>
 
-			<section class="top-bar-section">
-			<!-- Right Nav Section -->
-				<ul class="right">
-					<li><a href="signup.html">Sign Up!</a></li>
-<!-- 					<li class="has-dropdown">
-						<a href="#">Right Button Dropdown</a>
-						<ul class="dropdown">
-							<li><a href="#">First link in dropdown</a></li>
-						</ul>
-					</li>
- -->				</ul>
+	<ul class="left">
+	  <li><a href="#">Left Nav Button</a></li>
+	</ul>
+  </section>
+</nav>
 
-			<!-- Left Nav Section -->
-<!-- 				<ul class="left">
-					<li><a href="#">Left Nav Button</a></li>
-				</ul>
- -->			</section>
-		</nav>
-	
 
-		<div id="content">
-			<div class="row">
-				<div class="small-6 columns small-centered">
+ <div id="intro">
+		<div class="row">
+			<div class="large-6 medium-6 columns">
+				<img src="img/nodes.png" alt="logo" />
+				<h3 class="color-white">A platform to connect tutors and students</h3>
+				<h6 class="color-white" style="line-height: 27px;">Learning and earning at the tap of a button.  Maecenas fermentum neque id lobortis consectetur. Integer facilisis diam metus, quis volutpat mauris porta eget.
+				</h6>
+			</div>
+			<div class="large-6 medium-6 columns">
 
-					<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vanamo_Logo.png">
-					<h6>A place to match up tutors and tutees</h1>
-					<a href="#" class="button small-centered">Sign Up!</a>
+<br><br><br>
+<ul class="button-group">
+  <li><a href="#" class="button">I want to be tutored</a></li>
+  
+</ul>
+
+<br>
+<ul class="button-group">
+  <li><a href="#" class="button">I want to become a tutor</a></li>
+</ul>
 				</div>
 			</div>
 		</div>
-
-		<div id="footer">
-			<div class="row">
-				<div class="small-6 columns">
-					<img style="height: 150px" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vanamo_Logo.png">
+	</div>
+	<div id="features">
+		<div class="row">
+			<div class="large-3 medium-6 small-12 columns">
+				<div class="featured-item">
+					<div class="glyph-icon flaticon-airplane6"></div>
+					<h6 class="text-center">Web Design</h6>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur 
+					</div>
 				</div>
-
-				<div class="small-6 columns">
-					<p> best website</p>
+			</div>
+			<div class="large-3 medium-6 small-12 columns">
+				<div class="featured-item">
+					<div class="glyph-icon flaticon-arrow124" style="color: rgb(23, 199, 85);"></div>
+					<h6 class="text-center">Web Design</h6>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur 
+					</div>
+				</div>
+			</div>
+			<div class="large-3 medium-6 small-12 columns">
+				<div class="featured-item">
+					<div class="glyph-icon flaticon-auricular2" style="color: rgb(8, 161, 181);"></div>
+					<h6 class="text-center">Web Design</h6>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur 
+					</div>
+				</div>
+			</div>
+			<div class="large-3 medium-6 small-12 columns">
+				<div class="featured-item">
+					<div class="glyph-icon flaticon-back5" style="color: rgb(255, 136, 0);"></div>
+					<h6 class="text-center">Web Design</h6>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur 
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div id="why">
+		<div class="row">
+			<div class="large-12 columns">
+				<h2 class="text-center color-pink headings">Why Choose Us</h2>
+			</div>
+			<div class="large-4 columns" style="padding: 0px;">
+				<div class="why-item border-right border-bottom">
+					<div class="glyph-icon flaticon-book53"></div>
+					<h4>Lorem Ipsum</h4>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ligula id ullamcorper luctus. Etiam ex magna, blandit vitae rutrum at
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns" style="padding: 0px;">
+				<div class="why-item  border-right border-bottom">
+					<div class="glyph-icon flaticon-boat5"></div>
+					<h4>Lorem Ipsum</h4>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ligula id ullamcorper luctus. Etiam ex magna, blandit vitae rutrum at
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns" style="padding: 0px;">
+				<div class="why-item border-bottom ">
+					<div class="glyph-icon flaticon-battery45"></div>
+					<h4>Lorem Ipsum</h4>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ligula id ullamcorper luctus. Etiam ex magna, blandit vitae rutrum at
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns" style="padding: 0px;">
+				<div class="why-item border-right ">
+					<div class="glyph-icon flaticon-bag10"></div>
+					<h4>Lorem Ipsum</h4>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ligula id ullamcorper luctus. Etiam ex magna, blandit vitae rutrum at
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns" style="padding: 0px;">
+				<div class="why-item  border-right ">
+					<div class="glyph-icon flaticon-backpack1"></div>
+					<h4>Lorem Ipsum</h4>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ligula id ullamcorper luctus. Etiam ex magna, blandit vitae rutrum at
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns" style="padding: 0px;">
+				<div class="why-item">
+					<div class="glyph-icon flaticon-ball8"></div>
+					<h4>Lorem Ipsum</h4>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque ligula id ullamcorper luctus. Etiam ex magna, blandit vitae rutrum at
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="additional-info">
+		<div class="row">
+			<div class="large-12 columns">
+				<h2 class="color-white headings text-center">Something Great is Coming</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 columns">
+				<img src="img/mockup.png" alt="mockup" />
+			</div>
+		</div>
+	</div>
 
 	
 		<script src="js/vendor/jquery.js"></script>
